@@ -25,7 +25,7 @@ import { ShoppinstEditComponent } from './shopping-list/shoppinst-edit/shoppinst
     BrowserModule,
     NgbModule.forRoot()
   ],
-  providers: [],
+  providers: [RecipeListComponent],
   bootstrap: [AppComponent]
 })
 

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {Recipe}from '../recipe.module';
+import {Recipe} from '../recipe.module';
+import {HeaderComponent} from '../../header/header.component';
+
 @Component({
   selector: 'app-recipe-list',
   templateUrl: './recipe-list.component.html',
@@ -23,4 +25,7 @@ export class RecipeListComponent implements OnInit {
   ngOnInit() {
   }
 
+  setRecipeList(list) {
+    this.recipes = list;
+  }
 }

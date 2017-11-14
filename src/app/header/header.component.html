@@ -27,9 +27,9 @@
           </div>
         </li>
       </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="&#xf002;" aria-label="Search" style="font-family: 'FontAwesome';">
-        <button class="btn btn-outline-danger my-2 my-sm-0" type="submit" (click)="filterItems()">Search</button>
-      </form>
+      <div class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="&#xf002;" aria-label="Search" style="font-family: 'FontAwesome';" #filter>
+        <button class="btn btn-outline-danger my-2 my-sm-0" type="submit" (click)="search(filter.value)">Search</button>
+      </div>
     </div>
   </nav>
