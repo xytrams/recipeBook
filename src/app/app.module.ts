@@ -9,6 +9,9 @@ import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.com
 import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-item.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppinstEditComponent } from './shopping-list/shoppinst-edit/shoppinst-edit.component';
+import { FormsModule }   from '@angular/forms';
+import { FilterPipe } from './shared/filter.pipe';
+
 
 @NgModule({
   declarations: [
@@ -19,11 +22,13 @@ import { ShoppinstEditComponent } from './shopping-list/shoppinst-edit/shoppinst
     RecipeDetailComponent,
     RecipeItemComponent,
     ShoppingListComponent,
-    ShoppinstEditComponent
+    ShoppinstEditComponent,
+    FilterPipe 
   ],
   imports: [
     BrowserModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    FormsModule 
   ],
   providers: [RecipeListComponent],
   bootstrap: [AppComponent]
