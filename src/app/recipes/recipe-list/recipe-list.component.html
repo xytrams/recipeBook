@@ -6,19 +6,9 @@
 </div>
 <hr/>
 <div class="row">
-        <div class="col-md-12">
-            <input class="form-control mr-sm-2" type="search" placeholder="&#xf002;" aria-label="Search" style="font-family: 'FontAwesome';"  [(ngModel)]="searchText" >
-            <a href="#" class="list-group-item clearfix" 
-            *ngFor="let recipe of recipes | search:'name,description':searchText"> 
-                <div class="pull-left">
-                    <h4 class="lsit-group-item-heading">{{recipe.name}}</h4>
-                    <p class="list-group-item-text">{{recipe.description}}</p>
-                </div>
-                <span>
-                    <img src="{{recipe.imgUrl}}" alt="" class="img-responsive pull-right" style="max-height: 100px;"/>
-                </span>
-            </a>
-            <app-recipe-item></app-recipe-item>
-        </div>
+    <div class="col-md-12">
+        <input class="form-control mr-sm-2" type="search" placeholder="&#xf002;" aria-label="Search" style="font-family: 'FontAwesome';"  [(ngModel)]="searchText" >
+        <app-recipe-item *ngFor="let recipeEl of recipes | search:'name,description':searchText" [recipe]="recipeEl"></app-recipe-item>
+    </div>
 </div>
 
